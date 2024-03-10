@@ -9,7 +9,8 @@ defmodule LiveAir.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      compilers: Mix.compilers() ++ [:surface]
     ]
   end
 
@@ -75,11 +76,12 @@ defmodule LiveAir.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind live_air", "esbuild live_air"],
+      "assets.setup": ["cmd --cd assets npm i", "esbuild.install --if-missing"],
+      "assets.build": ["cmd --cd assets npm run build", "esbuild default"],
+      "assets.clean": ["cmd rm -rf assets/node_modules", "phx.digest.clean --all"],
       "assets.deploy": [
-        "tailwind live_air --minify",
-        "esbuild live_air --minify",
+        "tailwind flytis --minify",
+        "esbuild flytis --minify",
         "phx.digest"
       ]
     ]
