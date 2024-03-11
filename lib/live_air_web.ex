@@ -117,6 +117,7 @@ defmodule LiveAirWeb do
       use Surface.LiveView,
         layout: {LiveAirWeb.Layouts, :app}
 
+      on_mount LiveAirWeb.Plugs.RestoreLocale
       unquote(html_helpers())
     end
   end

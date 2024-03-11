@@ -1,0 +1,27 @@
+
+.main {
+    @apply  min-h-screen bg-gohan;
+}
+
+.header {
+    @apply  p-4 bg-jiren;
+}
+
+.header_container{
+@apply flex justify-between;
+}
+.logo {
+    @apply flex flex-row justify-center items-center space-x-1 gap-4 ;
+}
+
+.logo_image {
+    @apply w-20 sm:w-24;
+}
+
+.logo_text {
+    @apply hidden md:flex text-center text-moon-9 sm:text-moon-10 md:text-moon-14 uppercase text-trunks font-semibold;
+}
+
+.language_image {
+    @apply w-5 h-5 rounded-md;
+}

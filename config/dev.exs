@@ -60,7 +60,8 @@ config :live_air, LiveAirWeb.Endpoint,
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/live_air_web/(controllers|live|components)/.*(ex|heex|sface|js)$"
-    ]
+    ],
+    reload_page_on_css_changes: true
   ]
 
 # Enable dev routes for dashboard and mailbox

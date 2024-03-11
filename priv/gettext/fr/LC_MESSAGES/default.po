@@ -1,0 +1,69 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: lib/live_air_web/components/core_components.ex:483
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr "Actions"
+
+#: lib/live_air_web/components/core_components.ex:160
+#, elixir-autogen, elixir-format
+msgid "Attempting to reconnect"
+msgstr "Tentative de reconnexion"
+
+#: lib/live_air_web/components/core_components.ex:151
+#, elixir-autogen, elixir-format
+msgid "Error!"
+msgstr "Erreur !"
+
+#: lib/live_air_web/components/core_components.ex:172
+#, elixir-autogen, elixir-format
+msgid "Hang in there while we get back on track"
+msgstr "Tenez bon pendant que nous nous remettons sur la bonne voie"
+
+#: lib/live_air_web/components/core_components.ex:167
+#, elixir-autogen, elixir-format
+msgid "Something went wrong!"
+msgstr "Quelque chose s'est mal passé !"
+
+#: lib/live_air_web/components/core_components.ex:150
+#, elixir-autogen, elixir-format
+msgid "Success!"
+msgstr "Succès !"
+
+#: lib/live_air_web/components/core_components.ex:155
+#, elixir-autogen, elixir-format
+msgid "We can't find the internet"
+msgstr "Nous ne trouvons pas Internet"
+
+#: lib/live_air_web/components/core_components.ex:76
+#: lib/live_air_web/components/core_components.ex:130
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr "fermer"
+
+#: lib/live_air_web/live/home_live/index.sface:2
+#, elixir-autogen, elixir-format
+msgid "Home"
+msgstr "Acceuil"
+
+#: lib/live_air_web/layouts/header/header.sface:4
+#: lib/live_air_web/layouts/root.sface:10
+#, elixir-autogen, elixir-format
+msgid "Live Air"
+msgstr ""
+
+#: lib/live_air_web/layouts/header/header.sface:5
+#, elixir-autogen, elixir-format
+msgid "An introduction to Phoenix"
+msgstr "Une introduction a Phoenix"

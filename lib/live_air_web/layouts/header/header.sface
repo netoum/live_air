@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="header_container">
+    <div class="logo">
+      <img class="logo_image" src="/images/logo.svg" alt={gettext("Live Air")}>
+      <div class="logo_text">{gettext("An introduction to Phoenix")}</div>
+    </div>
+    <Dropdown id="dropdown-02">
+      <Dropdown.Trigger>
+        <Chip class="w-32">
+          <img
+            src={"/images/languages/#{Gettext.get_locale()}.svg"}
+            class="language_image"
+            alt={Cldr.LocaleDisplay.display_name!(Gettext.get_locale(), locale: Gettext.get_locale())}
+          />
+          {String.capitalize(
+            Cldr.LocaleDisplay.display_name!(Gettext.get_locale(), locale: Gettext.get_locale())
+          )}</Chip>
+      </Dropdown.Trigger>
+      <Dropdown.Options>
+        <Dropdown.CustomOption
+          :for={language <- Cldr.known_locale_names()}
+          on_click="select_language"
+          value={language}
+        >
+          <img
+            src={"/images/languages/#{Atom.to_string(language)}.svg"}
+            class="language_image"
+            alt={Cldr.LocaleDisplay.display_name!(language, locale: language)}
+          />
+          {String.capitalize(Cldr.LocaleDisplay.display_name!(language, locale: language))}
+        </Dropdown.CustomOption>
+      </Dropdown.Options>
+    </Dropdown>
+  </div>
+</header>

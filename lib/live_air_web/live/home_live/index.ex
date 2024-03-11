@@ -1,7 +1,7 @@
 defmodule LiveAirWeb.HomeLive.Index do
   use LiveAirWeb, :surface_live_view
-  alias Moon.Design.Button
-  alias Moon.Design.BottomSheet
+  import LiveAirWeb.Gettext
+
   @impl true
   def mount(_params, _session, socket) do
     {:ok, socket}
@@ -17,19 +17,5 @@ defmodule LiveAirWeb.HomeLive.Index do
   defp apply_action(socket, :new, _params) do
     socket
     |> assign(:page_title, "LiveAir")
-  end
-
-  @impl true
-
-  def handle_event("set_open", _, socket) do
-    BottomSheet.open("modal_bottom_sheet")
-    {:noreply, socket}
-  end
-
-  @impl true
-
-  def handle_event("set_close", _, socket) do
-    BottomSheet.close("modal_bottom_sheet")
-    {:noreply, socket}
   end
 end

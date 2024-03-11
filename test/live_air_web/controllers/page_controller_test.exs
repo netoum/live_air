@@ -3,6 +3,6 @@ defmodule LiveAirWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")
-    assert html_response(conn, 200) =~ "Modal on large screens"
+    assert html_response(conn, 200) =~ "Homepage Button"
   end
 end

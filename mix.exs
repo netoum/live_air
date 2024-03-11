@@ -60,7 +60,12 @@ defmodule LiveAir.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
       {:moon, "~> 2.81.0"},
-      {:sourceror, "~> 0.12.0"}
+      {:sourceror, "~> 0.12.0"},
+      {:ex_cldr, "~> 2.37.2"},
+      {:ex_cldr_plugs, "~> 1.3"},
+      {:ex_cldr_locale_display, "~> 1.4"},
+      {:ex_cldr_currencies, "~> 2.15"},
+      {:ex_cldr_dates_times, "~> 2.14"}
     ]
   end
 

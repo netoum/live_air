@@ -14,6 +14,12 @@ defmodule LiveAirWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/:locale", LiveAirWeb do
+    pipe_through :browser
+
+    live "/", HomeLive.Index, :new
+  end
+
   scope "/", LiveAirWeb do
     pipe_through :browser
 

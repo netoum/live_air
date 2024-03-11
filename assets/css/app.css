@@ -7,4 +7,6 @@
 
 /* This file is for your main application CSS */
 
-@import "theme/moon.css"
+@import "theme/moon.css";
+
+@import "layouts.css"

@@ -25,6 +25,15 @@ defmodule LiveAirWeb.Endpoint do
     gzip: false,
     only: LiveAirWeb.static_paths()
 
+  # Code reloading can be explicitly enabled under the
+  # :code_reloader configuration of your endpoint.
+  if code_reloading? do
+    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
+    plug Phoenix.LiveReloader
+    plug Phoenix.CodeReloader
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :live_air
+  end
+
   plug Plug.Static,
     at: "/moon/assets",
     from: :moon,
@@ -37,15 +46,6 @@ defmodule LiveAirWeb.Endpoint do
     from: :moon_icons,
     gzip: true,
     cache_control_for_etags: "public, max-age=86400"
-
-  # Code reloading can be explicitly enabled under the
-  # :code_reloader configuration of your endpoint.
-  if code_reloading? do
-    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
-    plug Phoenix.LiveReloader
-    plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :live_air
-  end
 
   plug Phoenix.LiveDashboard.RequestLogger,
     param_key: "request_logger",

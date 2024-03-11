@@ -20,5 +20,8 @@ defmodule LiveAirWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :live_air
+  use Gettext,
+    otp_app: :live_air,
+    default_locale: "en",
+    locales: ~w("fr")
 end

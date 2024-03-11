@@ -68,6 +68,11 @@ config :surface, :components, [
   # put here your app configs for surface
 ]
 
+# Cldr
+config :ex_cldr,
+  default_locale: "en",
+  default_backend: LiveAir.Cldr
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
